@@ -6388,3 +6388,6 @@ body footer {
   body .mainSection .mainSectionContent {
     flex-direction: column;
     padding: 4% 3%; } }
+
+.content {
+  padding: 2%; }
