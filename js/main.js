@@ -89,6 +89,7 @@ function submit() {
     country.val('');
     state.val('');
     (termsCheckbox).prop('checked', false);
+    $('.socialMediaComment').css("color", "white")
     
     var selectedElements = $(".selected label input");
 
@@ -190,6 +191,11 @@ function validate(name, phone, email, pass, passConfirmation, country, termsChec
 
     if( !isUserConnectedSocialMedia ) {
         $('.socialMediaComment').css("color", "red")
+        isValid = false;
+    }
+
+    if( !isUserConnectedSocialMedia ) {
+        $('.socialMediaComment').css("color", "white")
         isValid = false;
     }
 
