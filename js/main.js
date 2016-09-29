@@ -13,7 +13,7 @@ $('#langOpt').multiselect({
 $( document ).ready(function() {
 
 
-    $.get("http://localhost:8080/interests", {}, function (data) {
+    $.get("http://www.octaneignite.com/pub_signup.html:3000/interests", {}, function (data) {
         // ****** rendering the options from the server ******* //
 
         interests = data;
@@ -39,7 +39,7 @@ function submit() {
 
     var isUserConnectedSocialMedia = false;
 
-    $.get("http://localhost:8080/userConnected",{},function(data) {
+    $.get("http://www.octaneignite.com/pub_signup.html:3000/userConnected",{},function(data) {
         // console.log(data)
 
         if (data) isUserConnectedSocialMedia = true;
@@ -69,7 +69,7 @@ function submit() {
                     interests: interestsCheckbox
                 }        
                 ////// POST to node.js:
-                $.post("http://localhost:8080/signin",{user: JSON.stringify(data)}, function(data){
+                $.post("http://www.octaneignite.com/pub_signup.html:3000/signin",{user: JSON.stringify(data)}, function(data){
                         console.log("login success");
                         doWhenFinish(name, phone, email, pass, passConfirmation, country, state, termsCheckbox)
                 });
